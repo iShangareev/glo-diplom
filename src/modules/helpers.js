@@ -1,0 +1,5 @@
+const animate = () => {
+
+}
+
+export { animate }
