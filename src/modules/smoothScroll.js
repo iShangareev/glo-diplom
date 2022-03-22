@@ -4,14 +4,13 @@ const scroll = () => {
       smoothLink.addEventListener('click', function (e) {
           e.preventDefault()
           const id = smoothLink.getAttribute('href')
-
+          console.log(id)
           document.querySelector(id).scrollIntoView({
               behavior: 'smooth',
               block: 'start'
           })
       })
   }
-  console.log(smoothLinks)
 }
 
-export default scroll
+export { scroll }
