@@ -842,21 +842,48 @@ hr.white {
 	position: absolute;
 	bottom: 25px;
 }
-.top-slider .slick-dots li {
+.slick-dot {
 	border-color: #fff !important;
 }
-.top-slider .slick-dots li.slick-active {
+.slick-active {
 	background-color: #fff !important;
 }
 .top-slider {
 	overflow: hidden;
 	height: 450px;
+  background: rgba(0, 0, 0, 0.6);
 }
 .top-slider .item {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+  display: none;
 }
+.top-slider .item-active {
+	overflow: hidden;
+	height: 450px;
+	position: relative;
+  display: block;
+  animation: fadeInFromNone 0.5s ease-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    10% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
 .top-slider .item:before {
 	content: "";
 	display: block;
@@ -932,8 +959,7 @@ video#video_background {
 		height: 520px;
 	}
 	.top-slider .table {
-		opacity: 0;
-		visibility: hidden;
+		opacity: 1;
 		-webkit-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
