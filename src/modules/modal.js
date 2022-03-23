@@ -11,11 +11,11 @@ const modal = () => {
   })
 
   modal.addEventListener('click', (e) => {
-    if(e.target.matches('.modal-overlay') || e.target.closest('div>img')) {
+    if(e.target.matches('.modal-overlay') || e.target.closest('.modal-close')) {
       modal.style.display = 'none'
       modalCallback.style.display = 'none'
     }
-  })
+  }, true)
 }
 
 export default modal
