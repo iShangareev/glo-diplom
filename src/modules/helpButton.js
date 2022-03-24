@@ -9,7 +9,7 @@ const helpButton = () => {
       btn.style.opacity = '1'
     } else { btn.style.opacity = '0' }
   }
-  console.log(window.pageYOffset)
+
   window.onscroll = getScrollY
 }
 

@@ -1,5 +1,4 @@
 const slider = () => {
-  const sliderBlock = document.querySelector('.top-slider')
   const slides = document.querySelectorAll('.item')
   const ul = document.querySelector('.slick-dots')
 

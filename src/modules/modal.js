@@ -4,7 +4,7 @@ const modal = () => {
   const mainWrapper = document.querySelector('.main-wrapper')
 
   mainWrapper.addEventListener('click', (e) => {
-    if(e.target.matches('.mob-menu-btn') || e.target.matches('.callback-btn') || e.target.matches('.button-services')) {
+    if(e.target.matches('.mob-menu-btn') || e.target.matches('.fancyboxModal') || e.target.matches('.button-services')) {
       modal.style.display = 'block'
       modalCallback.style.display = 'block'
     }

@@ -995,6 +995,7 @@ video#video_background {
 }
 /* end top slider */
 
+
 /************************* accordeon **************************/
 .accordeon .element-content {
 	display: none;
@@ -1187,6 +1188,62 @@ video#video_background {
 	-moz-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
+
+.container {
+  overflow: hidden;
+}
+
+.b-carousel {
+  margin: auto;
+	width: 975px;
+	overflow: hidden;
+	position: relative;
+  box-sizing: border-box;
+}
+
+
+.b-carousel__wrap {
+    box-sizing: border-box;
+    width: 100%;
+		display: flex;
+		transition: transform .5s;
+		will-change: transform;
+		position: relative;
+		z-index: 1;
+		height: 100%;
+    gap: 15px
+	}
+
+  .b-carousel__item {
+      box-sizing: border-box;
+			flex: 0 0 310px;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+    @media only screen and (max-width: 1240px) {
+      .b-carousel {
+        width: 650px;
+      }
+
+      .b-carousel__item {
+          flex: 0 0 310px;
+        }
+    }
+
+    @media only screen and (max-width: 670px) {
+      .b-carousel {
+        width: 310px;
+      }
+
+      .b-carousel__item {
+          flex: 0 0 295px;
+        }
+    }
+
+
 .services-elements .title-h5 {
 	overflow: hidden;
 	position: relative;
