@@ -1,25 +1,9 @@
 const slider = () => {
   const slides = document.querySelectorAll('.item')
-  const ul = document.querySelector('.slick-dots')
-
-  const getDots = () => {
-    for(let i = 0; i < slides.length; i++ ) {
-      const dot = document.createElement('li')
-      if(i < 1) {
-        dot.classList.add('slick-active')
-      }
-      dot.classList.add('slick-dot')
-      ul.append(dot)
-    }
-  }
-
-  getDots()
-
 
   const timeInterval = 3000
   let currentSlide = 0
   let interval
-  const dot = document.querySelectorAll('.slick-dot')
 
   const prevSlide = (elems, index, strClass) => {
     elems[index].classList.remove(strClass)
@@ -31,7 +15,6 @@ const slider = () => {
 
   const autoSlide = () => {
     prevSlide(slides, currentSlide, 'item-active')
-    prevSlide(dot, currentSlide, 'slick-active')
     currentSlide++
 
     if(currentSlide >= slides.length) {
@@ -39,7 +22,6 @@ const slider = () => {
     }
 
     nextSlide(slides, currentSlide, 'item-active')
-    nextSlide(dot, currentSlide, 'slick-active')
   }
 
   const startSlide = (timer = 1500) => {
