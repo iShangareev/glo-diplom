@@ -6,6 +6,7 @@ const helpButton = () => {
   const getScrollY = () => {
     if (window.pageYOffset > 700) {
       scroll()
+      btn.style.display = 'block'
       btn.style.opacity = '1'
     } else { btn.style.opacity = '0' }
   }
