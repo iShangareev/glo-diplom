@@ -6,7 +6,6 @@ const tabs = () => {
     if(e.target.closest('.accordeon__element')) {
       tabs.forEach((tab) => {
         const tabBtn = e.target.closest('.accordeon__element')
-        console.log(tab)
         if(tab === tabBtn) {
           tab.classList.add('active')
         } else {

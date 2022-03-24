@@ -6,8 +6,6 @@ const sendForm = () => {
   const errorText = 'Ошибка...'
   const successText = 'Отправлено'
 
-  console.log(validateStatuses)
-
   const validate = (list) => {
     let success = true
 
